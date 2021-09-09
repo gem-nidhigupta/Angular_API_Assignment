@@ -22,7 +22,11 @@
         </div>
         <br><br>
 
-        <button type="submit">Submit</button>
+        <button type="submit" >Submit</button>
+        <br><br>
+        <span *ngIf="counter" class="toaster_message"> Data sent to API. Check Console!
+            <button (click)="close_toaster()">x</button>
+        </span>
         <br><br>
         <a routerLink="/viewDetailsAll" >View All Users </a>
         

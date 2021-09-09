@@ -1,21 +1,22 @@
-<p>view-details-of-all-users works!</p>
-<h1> Data recieved from Api</h1>
+
+<h1> Data recieved from Api
+<button type="button" ><a routerLink="/getUserDetails">Go Back To Send Data Page</a></button>
+</h1>
 <table>
     <thead>
 		<tr>
 			<td>ID</td>
-            <td>TITLE</td>
-            <td>URL Image</td>
-            <td>THUMBNAIL_URL_IMage</td>
+      <td>TITLE</td>
+      <td>URL Image</td>
+      <td>THUMBNAIL_URL_IMAGE</td>
 		</tr>
     </thead>
 	<tbody>
-		<tr *ngFor="let data of preExistingDataArray;index as i">
+		<tr *ngFor="let data of preExistingDataArray;index as i" >
 			<td>{{preExistingDataArray[i].id}}</td>
       <td>{{preExistingDataArray[i].title}}</td>
-      <td><img [src]="https://via.placeholder.com/600/b3db9a" width="100px" height="100px"></td>
-      <td>{{preExistingDataArray[i].thumbnailUrl}}</td>
+      <td width="200px"><img src={{preExistingDataArray[i].url}} width="100px" height="100px"></td> 
+      <td><img src={{preExistingDataArray[i].thumbnailUrl}} width="100px" height="100px"></td>
 		</tr>
 	</tbody>
 </table>
-<a routerLink="/getUserDetails">get-user-details-page</a>

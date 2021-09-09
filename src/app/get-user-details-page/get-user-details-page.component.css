@@ -9,3 +9,6 @@ h1 {
 label {
   font-weight: bolder;
 }
+.toaster_message {
+  background-color: palegreen;
+}

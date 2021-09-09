@@ -17,6 +17,7 @@ import { DataServiceService } from 'src/services/data-service.service';
 export class GetUserDetailsPageComponent implements OnInit {
   userDetails!: FormGroup;
   preExistingDataArray: any = [];
+  counter = 0;
   detailsToBeSent = {
     title: '',
     url: '',
@@ -36,18 +37,19 @@ export class GetUserDetailsPageComponent implements OnInit {
     });
   }
   onSubmit() {
-    console.log(this.userDetails.value);
+    console.log('data that is sent', this.userDetails.value);
     this.detailsToBeSent.title = this.userDetails.value?.title;
     this.detailsToBeSent.url = this.userDetails.value?.url;
     this.detailsToBeSent.thumb_url = this.userDetails.value?.thumb_url;
     this.dataService.sendData(this.detailsToBeSent).subscribe(
       (res) => {
-        console.log(res);
+        console.log('response from api', res);
       },
       (err) => {
         console.log(err);
       }
     );
+    this.counter = this.counter + 1; //to display toaster
   }
 
   // viewAllRecords() {
@@ -57,4 +59,8 @@ export class GetUserDetailsPageComponent implements OnInit {
   //     console.log('all data in array::::', this.preExistingDataArray[0].title);
   //   });
   // }
+  close_toaster() {
+    this.counter = 0;
+    this.userDetails.reset();
+  }
 }
