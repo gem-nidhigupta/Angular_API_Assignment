@@ -1,0 +1,11 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+h1 {
+  text-align: center;
+  background-color: darkcyan;
+}
+label {
+  font-weight: bolder;
+}

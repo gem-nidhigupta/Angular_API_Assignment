@@ -1,0 +1,21 @@
+<p>view-details-of-all-users works!</p>
+<h1> Data recieved from Api</h1>
+<table>
+    <thead>
+		<tr>
+			<td>ID</td>
+            <td>TITLE</td>
+            <td>URL Image</td>
+            <td>THUMBNAIL_URL_IMage</td>
+		</tr>
+    </thead>
+	<tbody>
+		<tr *ngFor="let data of preExistingDataArray;index as i">
+			<td>{{preExistingDataArray[i].id}}</td>
+      <td>{{preExistingDataArray[i].title}}</td>
+      <td><img [src]="https://via.placeholder.com/600/b3db9a" width="100px" height="100px"></td>
+      <td>{{preExistingDataArray[i].thumbnailUrl}}</td>
+		</tr>
+	</tbody>
+</table>
+<a routerLink="/getUserDetails">get-user-details-page</a>

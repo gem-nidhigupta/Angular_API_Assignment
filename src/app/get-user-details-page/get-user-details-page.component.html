@@ -1,0 +1,30 @@
+<h1>Please enter your details</h1>
+<div class="form-container">
+    <form [formGroup]="userDetails" (ngSubmit)="onSubmit()" class="form">
+        <div>
+            <label>Title</label>
+            <br>
+            <input type="text" id="title" class="form-control" formControlName="title">
+        </div>
+        <br><br>
+        
+        <div>
+            <label>URL</label>
+            <br>
+            <input type="file" id="url" class="form-control" formControlName="url">
+        </div>
+        <br><br>
+
+        <div>
+            <label>Thumbnail Url</label>
+            <br>
+            <input type="file" id="thumb_url" class="form-control" formControlName="thumb_url">
+        </div>
+        <br><br>
+
+        <button type="submit">Submit</button>
+        <br><br>
+        <a routerLink="/viewDetailsAll" >View All Users </a>
+        
+    </form>
+</div>
