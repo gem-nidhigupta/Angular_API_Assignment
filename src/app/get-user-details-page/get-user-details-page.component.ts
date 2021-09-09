@@ -63,4 +63,14 @@ export class GetUserDetailsPageComponent implements OnInit {
     this.counter = 0;
     this.userDetails.reset();
   }
+
+  onFileChangeThumbnail(event: any) {
+    if (event.target.files[0] && event.target.files[0].length != 0) {
+      var reader = new FileReader();
+      reader.readAsDataURL(event.target.files[0]);
+      reader.onload = (res: any) => {
+        this.userDetails.value.thumb_url = reader.result;
+      };
+    }
+  }
 }

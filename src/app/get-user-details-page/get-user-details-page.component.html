@@ -18,7 +18,7 @@
         <div>
             <label>Thumbnail Url</label>
             <br>
-            <input type="file" id="thumb_url" class="form-control" formControlName="thumb_url" accept="image/jpeg,image/png,image/jpg,image/JPG,image/JPEG">
+            <input type="file" id="thumb_url" class="form-control" formControlName="thumb_url" accept="image/jpeg,image/png,image/jpg,image/JPG,image/JPEG"(change)="onFileChangeThumbnail($event)">
         </div>
         <br><br>
 
