@@ -7,11 +7,13 @@ import { GetUserDetailsPageComponent } from './get-user-details-page/get-user-de
 import { DataServiceService } from 'src/services/data-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ViewDetailsOfAllUsersComponent } from './view-details-of-all-users/view-details-of-all-users.component';
+import { GetImagesFromAssetsComponent } from './get-images-from-assets/get-images-from-assets.component';
 @NgModule({
   declarations: [
     AppComponent,
     GetUserDetailsPageComponent,
     ViewDetailsOfAllUsersComponent,
+    GetImagesFromAssetsComponent,
   ],
   imports: [
     BrowserModule,
