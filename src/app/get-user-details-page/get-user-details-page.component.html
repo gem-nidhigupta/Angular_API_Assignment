@@ -11,7 +11,7 @@
         <div>
             <label>URL</label>
             <br>
-            <input type="file" id="url" class="form-control" formControlName="url" accept="image/jpeg,image/png,image/jpg,image/JPG,image/JPEG">
+            <input type="file" id="url" class="form-control" formControlName="url" accept="image/jpeg,image/png,image/jpg,image/JPG,image/JPEG" (change)="onFileChangeOfUrl($event)">
         </div>
         <br><br>
 
